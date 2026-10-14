@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin - Royal Jewellery</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .admin-box {
+      max-width: 650px;
+      margin: 25px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 12px;
+      text-align: left;
+    }
+
+    .admin-box input {
+      width: 100%;
+      padding: 11px;
+      margin: 7px 0 14px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    .admin-product {
+      padding: 12px;
+      border-bottom: 1px solid #ddd;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Royal Jewellery</h1>
+    <p>Product Manager</p>
+  </header>
+
+  <main class="admin-box">
+    <h2>Add a Jewellery Product</h2>
+
+    <form id="product-form">
+      <label for="product-name">Product Name</label>
+      <input id="product-name" required>
+
+      <label for="product-price">Price in ₹</label>
+      <input id="product-price" type="number" min="1" required>
+
+      <label for="product-category">Category</label>
+      <input id="product-category" placeholder="Rings, Necklaces, Bangles" required>
+
+      <label for="product-image">Image Path</label>
+      <input id="product-image" placeholder="images/ring.jpg" required>
+
+      <button type="submit">Add Product</button>
+    </form>
+
+    <h2>My Products</h2>
+    <div id="admin-products"></div>
+    
+<h2>Add New Product</h2>
+
+<form id="productForm">
+  <input type="text" id="productName" placeholder="Product Name" required>
+  <br><br>
+
+  <input type="number" id="productPrice" placeholder="Price in ₹" min="1" required>
+  <br><br>
+
+  <input type="text" id="productCategory" placeholder="Category (Rings, Necklaces...)" required>
+  <br><br>
+
+  <input type="text" id="productImage" placeholder="Image path (images/ring.jpg)" required>
+  <br><br>
+
+  <input type="text" id="productDescription" placeholder="Product Description">
+  <br><br>
+
+  <button type="submit">Add Product</button>
+</form>
+
+<hr>
+
+<h2>All Products</h2>
+<div id="productList"></div>
+
+    <div id="productList"></div>
+
+    <p><a href="index.html">← Back to Store</a></p>
+  </main>
+
+  <script src="admin.js"></script>
+</body>
+</html>

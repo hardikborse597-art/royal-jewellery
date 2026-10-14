@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout - Royal Jewellery</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .checkout-box {
+      max-width: 550px;
+      margin: 25px auto;
+      padding: 24px;
+      background: white;
+      border-radius: 12px;
+      text-align: left;
+    }
+
+    .checkout-box input:not([type="radio"]),
+    .checkout-box textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 8px 0 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .checkout-box button {
+      width: 100%;
+      padding: 14px;
+      background: #218c4a;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Royal Jewellery</h1>
+    <p>Checkout via WhatsApp</p>
+  </header>
+
+  <main class="checkout-box">
+    <h2>Delivery Details</h2>
+
+    <form id="checkout-form">
+      <label for="name">Full Name</label>
+      <input id="name" required>
+
+      <label for="phone">Mobile Number</label>
+      <input id="phone" type="tel"
+             pattern="[6-9][0-9]{9}" maxlength="10"
+             placeholder="10-digit mobile number" required>
+
+      <label for="address">Full Delivery Address</label>
+      <textarea id="address" rows="3" required></textarea>
+
+      <label for="city">City</label>
+      <input id="city" required>
+
+      <label for="pincode">PIN Code</label>
+      <input id="pincode" inputmode="numeric"
+             pattern="[0-9]{6}" maxlength="6" required>
+
+      <h3>Payment Method</h3>
+      <label>
+        <input type="radio" name="payment" value="Cash on Delivery" required>
+        Cash on Delivery
+      </label>
+      <br><br>
+      <label>
+        <input type="radio" name="payment" value="Online Payment" required>
+        Online Payment
+      </label>
+
+      <h3 id="checkout-total">Order Total: ₹0</h3>
+
+      <button type="submit">Send Order on WhatsApp</button>
+      <p id="checkout-message"></p>
+    </form>
+
+    <a href="index.html">← Continue Shopping</a>
+  </main>
+
+  <script src="checkout.js"></script>
+</body>
+</html>
